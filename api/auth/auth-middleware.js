@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = require("../secrets"); // use this secret!
 
 const nErr = (status, message) => {
-  return { [status]: status, [message]: message };
+  return { status: status, message: message };
 }; //!experiment
 
 const restricted = (req, res, next) => {
